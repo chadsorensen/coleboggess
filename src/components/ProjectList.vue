@@ -46,7 +46,6 @@ export default {
         order: "fields.order"
       }).then(function(entries) {
         var items = entries.items;
-        console.log("items", items);
         for (var item in items) {
           var item = items[item];
           self.projects.push(item);
