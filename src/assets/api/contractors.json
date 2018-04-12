@@ -1,0 +1,54 @@
+[
+{
+  "title": "onDiem Makes Work Happen",
+  "copy": false,
+  "list": [
+    "Find shifts for FREE; no monthly membership",
+    "Spend more time working, less time searching",
+    "Work where, when and with whom you want",
+    "Set your own hourly rate",
+    "Maximize your time and income - on your terms"
+  ],
+  "align": "left",
+  "image": "contractors-1.jpg",
+  "link": {
+    "copy": "Get Started",
+    "url": "http://prod.ondiem.com/#/"
+  }
+},
+{
+  "title": "You’re just minutes away from Extra Income",
+  "copy": [
+    "Find the work that works for you - all at your fingertips.",
+    "Spare yourself hours of searching, sending resumes into the great abyss, and avoid the frustration of waiting to hear back.",
+    "Fill out your FREE profile, and take the first step toward the more flexible, fulfilling career you've been wanting."
+  ],
+  "list": false,
+  "align": "center",
+  "image": "contractors-2.jpg",
+  "link": {
+    "copy": "Search For Shifts Near You",
+    "url": "http://prod.ondiem.com/#/"
+  }
+},
+{
+  "title": "You’re just minutes away from Extra Income",
+  "copy": false,
+  "list": [
+    "Secure background check enhances your profile for practices",
+    "Availability calendar allow for full and half days",
+    "Full, editable profile",
+    "Document upload for CVs and certificates",
+    "Keyword tagging for skills and certifications",
+    "Ability to set and change hourly rates",
+    "Save practices to your favorites pool",
+    "Rate practices to help others find their best match"
+  ],
+  "align": "left",
+  "image": "contractors-3.jpg",
+  "link": {
+    "copy": "Get Started",
+    "url": "http://prod.ondiem.com/#/"
+  }
+}
+]

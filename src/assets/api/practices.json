@@ -1,0 +1,51 @@
+[
+{
+  "title": "onDiem Makes Work Happen <span>for Dental Practices</span>",
+  "copy": false,
+  "list": [
+    "Post shifts for FREE; no monthly membership required",
+    "Flex up and down, dynamically, based on demand",
+    "Choose from qualified, pre-vetted contractors ",
+    "Increase production, make more revenue",
+    "Reduce labor and administrative costs"
+  ],
+  "align": "left",
+  "image": "practice-1.jpg",
+  "link": {
+    "copy": "Get Started",
+    "url": "http://prod.ondiem.com/#/practice/register-1"
+  }
+},
+{
+  "title": "You’re just minutes away from Extra Revenue for your Business",
+  "copy": [
+    "With onDiem as part of your staff, you'll streamline the hiring process and seamlessly maintain your production levels - all at your fingertips.",
+    "Spare yourself the hours of sifting through stacks of resumes, added expense of staffing agencies or frustration of poor matches."
+  ],
+  "list": false,
+  "align": "center",
+  "image": "practice-2.jpg",
+  "link": {
+    "copy": "Search For Contractors",
+    "url": "http://prod.ondiem.com/#/practice/register-1"
+  }
+},
+{
+  "title": "It's Easy to Find Qualified Contractors, When You Want Them",
+  "copy": false,
+  "list": [
+    "Create FREE shift postings for open positions",
+    "Search qualified contractors for on-demand work",
+    "View pre-vetted credentials (background, state license, degree, etc.)",
+    "Save contractors to your favorites pool",
+    "Approve and automate payment",
+    "Rate professionals to help others find their best match"
+  ],
+  "align": "center",
+  "image": "practice-3.jpg",
+  "link": {
+    "copy": "Get Started",
+    "url": "http://prod.ondiem.com/#/practice/register-1"
+  }
+}
+]

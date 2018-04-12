@@ -1,0 +1,35 @@
+/* ============================================ *
+ * Name: onDiem
+ * Category: Marketing site build on Vue
+ * Technologies: HTML, CSS, JS,SCSS
+ * Version: 1.0.0
+ * Author: Chad Sorensen
+ * Date: 10/17/2017
+ * ============================================ */
+
+// 3rd Party Libraries
+@import "lib/bourbon/bourbon";
+@import "includes/reset";
+
+//Plugins
+// @import "plugins/swiper";
+// @import "plugins/magnific-popup";
+
+// Mixins
+@import "includes/mixins";
+
+// Variables
+@import "includes/variables";
+
+// Fonts
+// @import "includes/fonts";
+@import "includes/typography";
+
+
+// Helpers
+// @import "includes/helpers";
+@import "includes/easing";
+
+
+// Pages
+@import "pages/homepage";

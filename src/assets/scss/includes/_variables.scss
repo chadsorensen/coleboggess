@@ -1,0 +1,37 @@
+/* ============================================ *
+ * Variables
+ * ============================================ */
+
+// Responsive Sizes
+$largeWidth: 1440px;
+$max-width: 961px;
+$desktop: 960px;
+$notTablet: 801px;
+$tablet: 800px;
+$notMobile: 621px;
+$mobile: 620px;
+
+$col-5: 1110px;
+$col-4: 900px;
+$col-3: 1000px;
+$col-2: 767px;
+
+// Layout
+$content-padding: 30px;
+
+// Colors
+$black: #000000;
+$gray:  #787778;
+$grayDark:  #2e2e2e;
+$blue:  #2b6378;
+$offwhite:  #f7f5f7;
+$white: #FFFFFF;
+
+$primary-font: 'Montserrat', sans-serif;
+
+// Base Type Styles
+$font-size-base:          14px !default;
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429 !default; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
