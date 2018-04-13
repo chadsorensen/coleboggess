@@ -1,6 +1,14 @@
 /* ============================================ *
  * HOMEPAGE
  * ============================================ */
+:root {
+  --negative-offset: -20px;
+  --offset: 20px;
+  @include bp(min-width, $notTablet) {
+    --negative-offset: -40px;
+    --offset: 40px;
+  }
+}
 html {
   font-family: $primary-font;
   background: white;
@@ -10,9 +18,9 @@ html {
 }
 
 #app {
-  padding: 90px 20px 0;
+  padding: 90px var(--offset) 0;
   @include bp(min-width, $notTablet) {
-    padding: 0 40px;
+    padding: 0 var(--offset);
   }
 }
 
@@ -151,10 +159,68 @@ header {
   }
 }
 
+//Homepage Reel
+.video-container {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 88px);
+  max-height: 500px;
+  margin-left: var(--negative-offset);
+  background-repeat: no-repeat;
+  background-position: 30% center;
+  background-color: black;
+  background-size: cover;
+  margin-bottom: 90px;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 1;
+    cursor: pointer;
+  }
+  @include bp(min-width, $notTablet) {
+    background-position: center;
+  }
+}
+.play-button-holder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15vw;
+  max-width: 70px;
+  margin-top: -37px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.svg-play {
+  fill: #d2d2d2;
+  @include transition(fill .3s $easeOutQuad);
+  &:hover {
+    fill: white;
+  }
+  // transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reel {
+  position: relative;
+  background: black;
+  z-index: 2;
+  // opacity: 0;
+  // width: 100vw;
+  // height: calc(100vh - 88px);
+  // background: black;
+  // margin-left: -40px;
+}
+
 // Project List Grid
 .project-list {
-  margin-left: -40px;
-  margin-right: -40px;
+  margin-left: var(--negative-offset);
+  margin-right: var(--negative-offset);
 }
 
 .items {
