@@ -20,7 +20,7 @@ main {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1440px;
+  // max-width: 1440px;
 }
 
 // NAVIGATION
@@ -30,7 +30,7 @@ header {
   // right: 0;
   // left: 0;
   width: 100%;
-  max-width: 1440px;
+  // max-width: 1440px;
   margin: 0 auto;
   padding: 20px 0;
   @include display(flex);
@@ -159,9 +159,12 @@ header {
 
 .items {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  @include bp(min-width, 1200px) {
-    grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  // @include bp(min-width, 1200px) {
+  //   grid-template-columns: 1fr 1fr 1fr;
+  // }
+  @include bp(max-width, 600px) {
+    grid-template-columns: 1fr;
   }
 
   // @include column-count(1);
