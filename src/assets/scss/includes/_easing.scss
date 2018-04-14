@@ -23,6 +23,17 @@ $easeInOutQuint: cubic-bezier(.86, 0, .07, 1);
 $easeInOutExpo: cubic-bezier(1, 0, 0, 1);
 $easeInOutCirc: cubic-bezier(.785, .135, .15, .86);
 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .2s $easeOutQuad;
+}
+.fade-leave-active {
+  position: absolute;
+}
+.fade-enter, .fade-leave-to
+/* .component-fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
 .slide-enter { 
   opacity: 0;
   @include transform(translateY(-2%));

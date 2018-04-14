@@ -1,8 +1,8 @@
 <template>
-  <main>  
-    <section id="project-single" v-for="project in projects">
+  <main>
+    <section id="project-single" v-for="project in activeProject">
 
-      <div v-bind:style="{ backgroundImage: 'url(' + project.fields.coverImage.fields.file.url + ')' }" :alt="project.fields.coverImage.fields.title" class="post-image"></div>
+      <div v-bind:style="{ backgroundImage: `url(${project.fields.coverImage.fields.file.url})`}" :alt="project.fields.coverImage.fields.title" class="post-image"></div>
       <!-- <img :src="post.fields.image.fields.file.url" :alt="post.fields.image.fields.title" class="post-image"> -->
       <div class="post-wrapper">
         
@@ -56,7 +56,7 @@
       return {
         loading: false,
         pageUrl: window.location.href,
-        projects: [],
+        activeProject: this.$store.state.activeProject,
         swiperOption: {
           loop: true,
           grabCursor: true,
@@ -73,9 +73,14 @@
     },
     watch: {
       // call the method again if the route changes
-      '$route': 'getData'
+      '$route': 'fetchProject'
     },
     methods: {
+      fetchProject() {
+        console.log("this.slug", this.slug);
+        this.$store.dispatch('filter_project', this.slug);
+        console.log("this.$store.state.project", this.$store.state.project);
+      },
       getData: function () {
         var self = this;
         self.projects = [];
@@ -96,7 +101,8 @@
       }
     },
     created: function () {
-      this.getData();
+      this.fetchProject();
+      // this.getData();
     }
   }
 </script>

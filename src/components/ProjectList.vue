@@ -12,13 +12,7 @@
 </template>
  
 <script>
-const SPACE_ID = 'lyugizel31r9';
-const ACCESS_TOKEN = 'd0a7461cb18516d6bd2e529be5d5fa0382a682b5d16d187c3f45c6837e333074';
-var contentful = require('contentful');
-var client = contentful.createClient({
-  space: SPACE_ID,
-  accessToken: ACCESS_TOKEN
-});
+
 export default {
   props: {
     limit: {
@@ -28,12 +22,16 @@ export default {
   },
   data () {
     return {
-      projects: []
+      // projects: [],
+      projects: this.$store.state.projects,
     }
   },
   methods: {
     reInitialize: function () {
       this.getData();
+    },
+    checkProjects() {
+      if (this.$store.state.projects.length === 0) this.$store.dispatch('fetch_projects');
     },
     getData: function () {
       var self = this;
@@ -54,10 +52,13 @@ export default {
     }
   },
   created: function () {
-    this.getData();
+    this.checkProjects();
+    // if (this.$store.state.projects.length === 0) this.$store.dispatch('fetch_projects');
+    // console.log('this.$store', this.$store);
+    // this.getData();
   },
   watch: {
-    '$route': 'reInitialize'
+    '$route': 'checkProjects'
   }
 }
 </script>
