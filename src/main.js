@@ -7,10 +7,7 @@ import { store } from './store/index.js';
 import VueResource from 'vue-resource'
 require('swiper/dist/css/swiper.css')
 
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-
 Vue.use(VueResource)
-Vue.use(VueAwesomeSwiper)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
