@@ -8,7 +8,9 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   state: {
     projects: [],
-    activeProject: []
+    activeProject: [],
+    about: [],
+    contact: []
   },
   mutations,
   actions,

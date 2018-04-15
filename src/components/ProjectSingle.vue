@@ -30,19 +30,12 @@
       </div>
     </section>
     
-    <app-projectList :limit="100"></app-projectList>
+    <project-list :limit="100" :slug="slug"></project-list>
   </main>
 </template>
 
 <script>
   const marked = require('marked');
-  const SPACE_ID = 'lyugizel31r9';
-  const ACCESS_TOKEN = 'd0a7461cb18516d6bd2e529be5d5fa0382a682b5d16d187c3f45c6837e333074';
-  var contentful = require('contentful');
-  var client = contentful.createClient({
-    space: SPACE_ID,
-    accessToken: ACCESS_TOKEN
-  });
   import { swiper, swiperSlide } from 'vue-awesome-swiper'
   import ProjectList from './ProjectList'
   export default {
@@ -54,8 +47,6 @@
     },
     data () {
       return {
-        loading: false,
-        pageUrl: window.location.href,
         activeProject: this.$store.state.activeProject,
         swiperOption: {
           loop: true,
@@ -67,7 +58,7 @@
       }
     },
     components: {
-      'app-projectList': ProjectList,
+      ProjectList,
       swiper,
       swiperSlide
     },
@@ -77,24 +68,7 @@
     },
     methods: {
       fetchProject() {
-        console.log("this.slug", this.slug);
         this.$store.dispatch('filter_project', this.slug);
-        console.log("this.$store.state.project", this.$store.state.project);
-      },
-      getData: function () {
-        var self = this;
-        self.projects = [];
-        client.getEntries({
-          content_type: 'project',
-          limit: 1,
-          "fields.slug": self.slug
-        }).then(function(entries) {
-          var items = entries.items;
-          for (var item in items) {
-            var item = items[item];
-            self.projects.push(item);
-          }
-        });
       },
       compileMarkdown: function (input) {
         return marked(input);
@@ -102,7 +76,6 @@
     },
     created: function () {
       this.fetchProject();
-      // this.getData();
     }
   }
 </script>

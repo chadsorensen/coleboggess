@@ -24,7 +24,7 @@ $easeInOutExpo: cubic-bezier(1, 0, 0, 1);
 $easeInOutCirc: cubic-bezier(.785, .135, .15, .86);
 
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .2s $easeOutQuad;
+  transition: opacity .15s $easeOutQuad;
 }
 .fade-leave-active {
   position: absolute;
