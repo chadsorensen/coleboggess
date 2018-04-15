@@ -4,7 +4,7 @@ import ProjectLanding from '../components/ProjectLanding'
 import ProjectSingle from '../components/ProjectSingle'
 import About from '../components/About'
 import Contact from '../components/Contact'
-
+const Modernizr = require('../assets/js/modernizr-custom.js')
 
  
 Vue.use(Router)
