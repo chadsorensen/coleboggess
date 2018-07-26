@@ -27,6 +27,8 @@ $blue:  #2b6378;
 $offwhite:  #f7f5f7;
 $white: #FFFFFF;
 
+@include font-face("gotham", "./assets/fonts/Gotham-Book", $file-formats: otf ttf woff woff2);
+$font-gotham: 'gotham', helvetica, sans-serif;
 $primary-font: 'Montserrat', sans-serif;
 
 // Base Type Styles

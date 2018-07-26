@@ -19,7 +19,7 @@
 
 import ProjectList from './ProjectList'
 var reel = require('../assets/media/cole-boggess_reel_2013_HB.mp4');
-var poster = require('../assets/img/poster.jpg');
+var poster = require('../assets/img/poster.png');
 export default {
   data () {
     return {

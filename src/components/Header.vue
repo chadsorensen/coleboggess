@@ -1,16 +1,19 @@
 <template>
   <header role="banner" class="nav-wrap" v-bind:class="{ active: isOpen, scrolled: scrolled }">
-    <router-link to="/" class="site-title" v-on:click.native="closeMobileMenu()">Cole Boggess</router-link>
+    <nav role="navigation" class="navbar">
+      <router-link to="/" class="site-title" v-on:click.native="closeMobileMenu()">Cole Boggess</router-link>
+      <router-link to="/projects" v-on:click.native="closeMobileMenu()">Work</router-link>
+      <router-link to="/about" v-on:click.native="closeMobileMenu()">About</router-link>
+      <router-link to="/contact" v-on:click.native="closeMobileMenu()">Contact</router-link>
+    </nav>
     <div class="mobile-nav-trigger" @click="toggleMobileMenu()">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </div>
-    <nav role="navigation" class="navbar">
-      <router-link to="/projects" v-on:click.native="closeMobileMenu()">Projects</router-link>
-      <router-link to="/about" v-on:click.native="closeMobileMenu()">About</router-link>
-      <router-link to="/contact" v-on:click.native="closeMobileMenu()">Contact</router-link>
-    </nav>
+    <router-link to="/" class="logo" v-on:click.native="closeMobileMenu()">
+      <svg height="80" width="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 4000"><path fill="#585655" d="M1900.6 2138.1v378.1c0 1.3 1.1 2.4 2.4 2.4h299.3c2.2 0 3.3 2.5 1.7 4l-353.7 340.6c-1.5 1.5-.5 4 1.7 4h904.1c345.4 0 527.6-210.3 527.6-473.1 0-212.1-143.1-387.9-325.6-427-5-1.1-5.2-7.9-.2-9.2 161.1-42.1 290.5-185.9 290.5-397 0-233.9-176.8-446.8-522.2-446.8h-604.1c-1.5.2-2.3 2-1.6 3.3l-.7 310.8c0 .8.1 1.5.2 2.2.2 1.2 1.2 2 2.5 2l519.4-.4c130.5 0 212.1 84.1 212.1 191.9 0 113-81.6 194.5-212.1 194.5h-424.7c-.7 0-1.3.3-1.8.7l-314.1 317.2c-.5.6-.7 1.2-.7 1.8zm744.5 411.1h-378.9c-2.7 0-4.9-2.1-4.9-4.8v-403.1c0-2.6 2.2-4.8 4.9-4.8h378.9c152.3 0 233.9 94.6 233.9 205 0 126.2-87 207.7-233.9 207.7z"/><path fill="#585655" d="M2074.4 1125.2l-1.6 294.1c0 6.8-5.8 12.4-12.9 12.4h-358.8c-464.1 0-728.5 257.7-727.6 566.8 1.2 435.7 405.4 556.4 748.7 556.4l394-.3-343.5 312.2h-60.5c-505.5 0-1055.8-268.6-1055.8-863.1 0-473 364.9-891 1050.5-891h354.7c7.1 0 12.9 5.6 12.8 12.5z"/></svg>
+    </router-link>
   </header>
 </template>
 
