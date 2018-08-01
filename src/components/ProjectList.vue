@@ -25,11 +25,13 @@ export default {
   },
   computed: {
     activeProjects() {
-      if(this.slug) {
+      console.log("this.slug", this.slug);
+      if (this.slug) {
         const results = this.projects.filter(project => project.fields.slug != this.slug);
         return results;
       } else {
-        return this.projects;
+        const results = this.projects.filter(project => project.fields.slug != 'reel-2018');
+        return results;
       }
     },
   },

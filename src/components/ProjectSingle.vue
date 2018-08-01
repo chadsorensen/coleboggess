@@ -1,7 +1,6 @@
 <template>
   <main>
     <section id="project-single" v-for="project in activeProject">
-
       <div v-bind:style="{ backgroundImage: `url(${project.fields.coverImage.fields.file.url})`}" :alt="project.fields.coverImage.fields.title" class="post-image"></div>
       <!-- <img :src="post.fields.image.fields.file.url" :alt="post.fields.image.fields.title" class="post-image"> -->
       <div class="post-wrapper">
@@ -69,6 +68,7 @@
     methods: {
       fetchProject() {
         this.$store.dispatch('filter_project', this.slug);
+        console.log("this.activeProject", this.activeProject);
       },
       compileMarkdown: function (input) {
         return marked(input);
