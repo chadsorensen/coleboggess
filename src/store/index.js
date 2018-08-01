@@ -9,6 +9,7 @@ export const store = new Vuex.Store({
   state: {
     projects: [],
     activeProject: [],
+    reel: false,
     about: [],
     contact: []
   },

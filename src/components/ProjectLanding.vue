@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="video-container" :style="{ backgroundImage: `url( ${poster} )`}">
+    <div v-if="this.$store.state.reel" class="video-container" v-bind:style="{ backgroundImage: `url(${this.$store.state.reel.fields.coverImage.fields.file.url})`}" :alt="this.$store.state.reel.fields.coverImage.fields.title">
       <router-link class="cover" :to="{ path: '/projects/reel-2018/' }"></router-link>
     </div>
     <div id="show-projects" class="content-container">
@@ -12,21 +12,17 @@
 <script>
 
 import ProjectList from './ProjectList'
-var poster = require('../assets/img/poster.jpg');
 export default {
   data () {
     return {
-      poster,
-      showVideo: false,
+
     }
   },
   components: {
     'app-projectList': ProjectList
   },
   methods: {
-    playVideo() {
-      this.showVideo = true;
-    }
-  }
+
+  },
 }
 </script>

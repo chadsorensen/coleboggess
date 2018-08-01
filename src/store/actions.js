@@ -24,6 +24,11 @@ export default {
         const items = entries.items;
         for (var item in items) {
           var project = items[item];
+            console.log("project.fields.order", project.fields.order);
+          if (project.fields.order === -10) {
+            console.log("reel project", project);
+            commit('ADD_REEL', project);
+          }
           commit('APPEND_PROJECT', project);
         }
       }).catch((err) => {

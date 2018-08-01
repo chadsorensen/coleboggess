@@ -1,8 +1,6 @@
 <template>
   <main>
     <section id="project-single" v-for="project in activeProject">
-      <div v-bind:style="{ backgroundImage: `url(${project.fields.coverImage.fields.file.url})`}" :alt="project.fields.coverImage.fields.title" class="post-image"></div>
-      <!-- <img :src="post.fields.image.fields.file.url" :alt="post.fields.image.fields.title" class="post-image"> -->
       <div class="post-wrapper">
         
         <div class="post-container">
@@ -12,6 +10,7 @@
           </div>
           <div class="media">
             <div v-if="project.fields.videoEmbed" class="video" v-html="compileMarkdown(project.fields.videoEmbed)"></div>
+            <div v-if="project.fields.videoEmbedTwo" class="video" v-html="compileMarkdown(project.fields.videoEmbedTwo)"></div>
 
             <div v-if="project.fields.media" class="carousel">
               <swiper :options="swiperOption" class="swiper-wapper">
@@ -74,7 +73,7 @@
         return marked(input);
       }
     },
-    created: function () {
+    created() {
       this.fetchProject();
     }
   }
