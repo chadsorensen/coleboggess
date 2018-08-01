@@ -9,7 +9,7 @@
         <div class="post-container">
           <div class="content">
             <h1>{{ project.fields.title }}</h1>
-            <div v-html="compileMarkdown(project.fields.projectDescription)"></div>
+            <div v-if="project.fields.projectDescription" v-html="compileMarkdown(project.fields.projectDescription)"></div>
           </div>
           <div class="media">
             <div v-if="project.fields.videoEmbed" class="video" v-html="compileMarkdown(project.fields.videoEmbed)"></div>
