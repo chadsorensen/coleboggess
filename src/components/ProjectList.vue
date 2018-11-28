@@ -2,6 +2,7 @@
 <template>
   <section class="project-list">
     <div class="items">
+      <!-- HERO BANNER IS SET TO ORDER OF -10 -->
       <div v-for="project in activeProjects" v-if="project.fields.order !== -10" class="item">
         <img :src="project.fields.coverImage.fields.file.url" :alt="project.fields.title">
         <h3 class="cover project-title">{{ project.fields.title }}</h3>

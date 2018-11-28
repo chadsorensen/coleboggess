@@ -24,6 +24,7 @@ export default {
         const items = entries.items;
         for (var item in items) {
           var project = items[item];
+          // HERO BANNER IS SET TO ORDER OF -10
           if (project.fields.order === -10) {
             commit('ADD_REEL', project);
           }
