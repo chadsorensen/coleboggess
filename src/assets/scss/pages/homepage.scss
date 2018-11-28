@@ -304,6 +304,11 @@ header {
     margin-bottom: 40px;
     font-size: 28px;
     font-weight: 300;
+    &.mobile-only {
+      order: -1;
+      margin-top: 30px;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -321,6 +326,7 @@ header {
     @include bp(max-width, 800px) {
       margin-right: 0;
       max-width: 100%;
+      order: 2;
     }
     p {
       padding-bottom: 20px;
@@ -330,6 +336,19 @@ header {
     }
   }
 }
+
+.desktop-only {
+  @include bp(max-width, 800px) {
+    display: none;
+  }
+}
+
+.mobile-only {
+  @include bp(min-width, 801px) {
+    display: none;
+  }
+}
+
 .media {
   @include flex(1);
   width: 100%;
@@ -338,6 +357,7 @@ header {
   }
   .video {
     position: relative;
+    margin-top: 30px;
     padding-bottom: 56.25%;
     overflow: hidden;
     iframe,

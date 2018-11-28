@@ -4,8 +4,9 @@
       <div class="post-wrapper">
         
         <div class="post-container">
+          <h1 class="mobile-only">{{ project.fields.title }}</h1>
           <div class="content">
-            <h1>{{ project.fields.title }}</h1>
+            <h1 class="desktop-only">{{ project.fields.title }}</h1>
             <div v-if="project.fields.projectDescription" v-html="compileMarkdown(project.fields.projectDescription)"></div>
           </div>
           <div class="media">
