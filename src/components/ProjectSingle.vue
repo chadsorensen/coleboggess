@@ -15,7 +15,7 @@
 
             <div v-if="project.fields.media" class="carousel">
               <swiper :options="swiperOption" class="swiper-wapper">
-                <swiperSlide v-for="item in project.fields.media" key="item">
+                <swiperSlide v-for="(item, index) in project.fields.media" :key="`item-${index}`">
                   <img :src="item.fields.file.url" alt="">
                 </swiperSlide>
                 <div class="swiper-pagination" slot="pagination"></div>

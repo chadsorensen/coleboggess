@@ -16,6 +16,9 @@
   @include position(absolute, 0 0 0 0);
 }
 
+@mixin svg-background($svg) {
+  background-image: url("data:image/svg+xml;charset=utf-8,#{$svg}");
+}
 
 @function px2vw($px, $width: 1440) {
   @return ($px / $width)*100+vw;

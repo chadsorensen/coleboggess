@@ -371,7 +371,18 @@ header {
     }
   }
   .carousel {
+    margin-top: 30px;
     margin-bottom: 50px;
+    .swiper-button-prev, 
+    .swiper-container-rtl .swiper-button-next {
+      cursor: pointer;
+      @include svg-background("<svg width='21' height='38' xmlns='http://www.w3.org/2000/svg'><g stroke='#7f7f7f' stroke-width='3' fill='none' fill-rule='evenodd' stroke-linecap='square'><path d='M18.625 3.04L2.558 19.003M18.52 35.056L2.558 18.99'/></g></svg>");
+    }
+    .swiper-button-next, 
+    .swiper-container-rtl .swiper-button-prev {
+      cursor: pointer;
+      @include svg-background("<svg width='22' height='37' xmlns='http://www.w3.org/2000/svg'><g stroke='#7f7f7f' stroke-width='3' fill='none' fill-rule='evenodd' stroke-linecap='square'><path d='M3.5 34.5L19 17.988M2.488 2.5L19 18'/></g></svg>");
+    }
   }
   .swiper-slide {
     width: 100%;
@@ -388,7 +399,7 @@ header {
 // ABOUT
 #about {
   @include display(flex);
-  @include justify-content(flex-start);
+  @include justify-content(center);
   @include bp(max-width, $tablet) {
     @include flex-direction(column);
   }
@@ -415,6 +426,12 @@ header {
       text-align: left;
     }
   }
+}
+
+// CONTACT
+#contact {
+  margin-top: 40px;
+  text-align: center;
 }
 
 img {
