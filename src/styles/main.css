@@ -1,0 +1,218 @@
+/* Breakpoints (media queries can't read custom properties):
+   sm = 600px, md = 800px */
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('../assets/fonts/Gotham-Book.woff2') format('woff2'),
+    url('../assets/fonts/Gotham-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-black: #000;
+  --color-gray: #787778;
+  --color-gray-dark: #2e2e2e;
+  --color-blue: #2b6378;
+  --color-offwhite: #f7f5f7;
+  --color-white: #fff;
+
+  --font-primary: 'Montserrat', system-ui, sans-serif;
+  --font-display: 'Gotham', helvetica, sans-serif;
+
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+  /* Page gutter */
+  --offset: 20px;
+}
+
+@media (min-width: 801px) {
+  :root {
+    --offset: 40px;
+  }
+}
+
+/* ---------- Reset ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+  background: var(--color-white);
+  color: var(--color-gray-dark);
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+html.no-scroll {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+/* ---------- Layout ---------- */
+
+#app {
+  padding: 0 var(--offset);
+}
+
+@media (max-width: 800px) {
+  #app {
+    /* room for the fixed mobile header */
+    padding-top: 90px;
+  }
+}
+
+main {
+  margin-inline: auto;
+}
+
+/* ---------- Typography ---------- */
+
+h1 {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+a {
+  display: inline-block;
+  color: var(--color-gray-dark);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+/* Markdown content from Contentful */
+.prose p + p {
+  padding-top: 20px;
+}
+
+.prose a {
+  font-size: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose ul {
+  list-style: none;
+}
+
+.prose li {
+  position: relative;
+  padding: 10px 0 0 10px;
+  font-size: 15px;
+}
+
+.prose li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  margin-top: 7px;
+  border-radius: 50%;
+  background: currentcolor;
+}
+
+/* ---------- Utilities ---------- */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.status {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.status a {
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+/* ---------- Route transition ---------- */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
